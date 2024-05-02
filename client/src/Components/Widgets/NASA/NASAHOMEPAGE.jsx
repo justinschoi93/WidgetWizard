@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import nasa_logo from '../../images/nasa_official.png';
 
-export default function APODHomePage() {
+export default function NASAofficial() {
   const [photoData, setPhotoData] = useState({
     date: '',
     title: '',

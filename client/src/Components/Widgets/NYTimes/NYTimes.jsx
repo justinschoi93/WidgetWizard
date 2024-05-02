@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import NYTapiLogo from '../../images/nytimes_api_logo.png';
 import nytimesheader from '../../images/nytimes-wordmark.svg'
 import BookmarkTag from '../../images/bookmark.png'
-import { useMutation } from '@apollo/client';
-import { BOOKMARK_ARTICLE } from '../../../../../WidgetWizard/client/src/utils/mutations';
-import { GET_NYT_BOOKMARKS } from '../../../../../WidgetWizard/client/src/utils/queries';
+// import { useMutation } from '@apollo/client';
+// import { BOOKMARK_ARTICLE } from '../../../../../WidgetWizard/client/src/utils/mutations';
+// import { GET_NYT_BOOKMARKS } from '../../../../../WidgetWizard/client/src/utils/queries';
 import NYTtoolbox from '../../../../../WidgetWizard/client/src/utils/NYT';
 import '../../css/NYT.css';
 
-export default function NYTimesWidget () {
+export default function NYTimes () {
 
     const [days, setDays] = useState(7);
     const [tab, setTab] = useState('real-time-feed');
@@ -18,7 +18,7 @@ export default function NYTimesWidget () {
     const [url, setUrl] = useState('https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=mSmLxowneVbMEuIyM8wkLqmMe06Gubv7');
     const sections = ['all','arts', 'automobiles', 'books/review', 'business', 'fashion', 'food', 'health', 'home', 'insider', 'magazine', 'movies', 'nyregion', 'obituaries', 'opinion', 'politics', 'realestate', 'science', 'sports', 'sundayreview', 'technology', 'theater', 't-magazine', 'travel', 'upshot', 'us', 'world']
     // const { bmdata } = useQuery(GET_NYT_BOOKMARKS);
-    const [bookmarkArticle] = useMutation(BOOKMARK_ARTICLE);
+    // const [bookmarkArticle] = useMutation(BOOKMARK_ARTICLE);
     const [RTFarticles, setRTFarticles] = useState([])
     const [TSarticles, setTSarticles] = useState([])
     const [MParticles, setMParticles] = useState([])
@@ -92,16 +92,16 @@ export default function NYTimesWidget () {
         }
     };
 
-    const saveBM = async (article)=>{
-        //bookmarkArticle will return nyt_bookmarks array, and also refetch bmdata
-        const bms = await bookmarkArticle({
-            variables: {
-                NYTarticleData: {...article}
-            },
-            refetchQueries: [GET_NYT_BOOKMARKS]
-        });
-        console.log(bms);
-    };
+    // const saveBM = async (article)=>{
+    //     //bookmarkArticle will return nyt_bookmarks array, and also refetch bmdata
+    //     const bms = await bookmarkArticle({
+    //         variables: {
+    //             NYTarticleData: {...article}
+    //         },
+    //         refetchQueries: [GET_NYT_BOOKMARKS]
+    //     });
+    //     console.log(bms);
+    // };
 
     const updateMost = (e, most) => {
            

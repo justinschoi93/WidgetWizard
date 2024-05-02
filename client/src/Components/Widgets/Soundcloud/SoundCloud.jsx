@@ -1,4 +1,4 @@
-export default function SoundCloudWidget (){
+export default function SoundCloud (){
     return (
         <div className="card">
             <iframe scrolling="no" frameBorder="no" allow="autoplay" 

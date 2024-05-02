@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import nasa_logo from '../../images/nasa_official.png';
 import '../../css/NASA.css';
 
-export default function APODWidget() {
+export default function NASAofficial() {
   const [photoData, setPhotoData] = useState({
     date: '',
     title: '',

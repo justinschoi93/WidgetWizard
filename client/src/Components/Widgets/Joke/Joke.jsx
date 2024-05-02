@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import jokesImage  from '../../images/jokes.jpeg'
 
-export default function JokeAPIWidget() {
+export default function Joke() {
 const searchJoke = async () => {
   try {
     const response = await fetch(
