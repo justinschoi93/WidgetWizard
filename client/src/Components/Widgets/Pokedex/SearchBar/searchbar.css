@@ -1,0 +1,11 @@
+.searchbar__form {
+    display: flex;
+    gap: 10px;
+}
+
+.searchbar__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+}

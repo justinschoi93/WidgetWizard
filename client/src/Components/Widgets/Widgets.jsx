@@ -1,7 +1,12 @@
-//import all Widgets so that we can access them all from one file
 import Clock from './Clock/Clock';
+import Pokedex from './Pokedex/Pokedex';
+
+
+
+
 const Widgets = {
-    Clock: Clock
+    Clock: Clock,
+    Pokedex: Pokedex
 }
 
 export default Widgets;

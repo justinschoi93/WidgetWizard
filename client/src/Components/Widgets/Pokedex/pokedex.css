@@ -1,0 +1,26 @@
+.pokedex__container {
+	max-width: 900px;
+	background-color: red;
+}
+
+.sprite__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	background-color: rgb(127, 223, 255);
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+.stats__container {
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #39FF14;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.searchbar__container {
+	margin: 10px;
+}
