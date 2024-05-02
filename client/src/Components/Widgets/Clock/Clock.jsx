@@ -8,10 +8,7 @@ const Clock = () => {
 
     const makeRequest = () => ({
         
-        hour: dayjs().hour(),
-        minute: dayjs().minute(),
-        second: dayjs().second(),
-        ampm: dayjs().hour() >= 12 ? 'PM' : 'AM',
+        time: dayjs().format('h:mm:ss A'),
         day: days[dayjs().day()],
         month: months[dayjs().month()],
         date: dayjs().date(),
@@ -34,7 +31,9 @@ const Clock = () => {
         <div className="clock__container">
             <div className="digital__clock">
                 <div className="clock__display">
-                    {`${data.month} ${data.date}, ${data.day} ${data.hour}:${data.minute}:${data.second} ${data.ampm}`}</div>
+                    <div className="date">{`${data.month} ${data.date}, ${data.day}`}</div>
+                    <div className="time">{ `${data.time}`}</div>
+                </div>
             </div>
         </div>
     );
