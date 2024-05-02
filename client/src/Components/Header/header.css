@@ -1,0 +1,17 @@
+.header__container {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.logo__img {
+    height: 10vh;
+}
+
+.logo__container {
+    margin: 20px;
+}

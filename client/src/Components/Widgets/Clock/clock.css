@@ -1,0 +1,16 @@
+.clock__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.digital__clock {
+    background-color: black;
+    color: #39ff14;
+    display: flex;
+    flex-direction: row;
+    font-size: 10rem;
+
+}
