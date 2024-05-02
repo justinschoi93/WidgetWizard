@@ -4,8 +4,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 20px;
+    background-color: grey
 }
 
 .logo__img {
@@ -14,4 +15,8 @@
 
 .logo__container {
     margin: 20px;
+}
+
+.auth__button {
+    margin-right: 50px;
 }

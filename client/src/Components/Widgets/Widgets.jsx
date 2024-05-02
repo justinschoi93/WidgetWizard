@@ -4,9 +4,7 @@ import Pokedex from './Pokedex/Pokedex';
 
 
 
-const Widgets = {
-    Clock: Clock,
-    Pokedex: Pokedex
-}
+const Widgets = [Clock, Pokedex]
+
 
 export default Widgets;

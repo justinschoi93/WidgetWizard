@@ -1,0 +1,14 @@
+{
+  "name": "widgetwizard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd client && npm run dev\" \"cd server && npm run start\"",
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

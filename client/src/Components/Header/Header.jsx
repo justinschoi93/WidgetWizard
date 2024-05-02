@@ -8,9 +8,8 @@ const Header = () => {
                 <img src={Gandalf} alt="gandalf_the_grey.jpg" className="logo__img" />
             </div>
             <h1 className="header__title">Widget Wizard</h1>
-            <button className="auth__button">
-                Login
-            </button>
+            
+            <button className="auth__button">Login</button>
         </header>
     )
 }
