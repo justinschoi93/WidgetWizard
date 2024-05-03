@@ -1,8 +1,8 @@
 // import React from 'react';
-import minhee from '../images/minhee.jpeg'
-import justin from '../images/justin.jpg'
-import ryan from '../images/ryan.png'
-import virginia from '../images/virginia.jpg'
+import minhee from './minhee.jpeg'
+import justin from './justin.jpg'
+import ryan from './ryan.png'
+import virginia from './virginia.jpg'
 
 const About = () => {
     const cardStyle = {
