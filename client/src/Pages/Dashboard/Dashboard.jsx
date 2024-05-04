@@ -1,11 +1,10 @@
 import './dashboard.css';
 // import Widgets from '../../Components/Widgets/Widgets';
+import Draggable from "react-draggable";
 import Clock from '../../Components/Widgets/Clock/Clock';
+import NASAofficial from '../../Components/Widgets/NASA/NASAofficial';
 import Pokedex from '../../Components/Widgets/Pokedex/Pokedex';
 import SoundCloud from '../../Components/Widgets/SoundCloud/SoundCloud';
-import Draggable, { DraggableCore } from "react-draggable";
-import NASAofficial from '../../Components/Widgets/NASA/NASAofficial';
-
 
 
 const Dashboard = () => {
