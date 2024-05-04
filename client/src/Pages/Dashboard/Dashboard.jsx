@@ -4,12 +4,19 @@ import Clock from '../../Components/Widgets/Clock/Clock';
 import Pokedex from '../../Components/Widgets/Pokedex/Pokedex';
 import SoundCloud from '../../Components/Widgets/SoundCloud/SoundCloud';
 import Draggable, { DraggableCore } from "react-draggable";
+import NASAofficial from '../../Components/Widgets/NASA/NASAofficial';
 
 
 
 const Dashboard = () => {
     return (
         <section className="dashboard__container">
+            <Draggable handle=".drag-handle">
+                <div>
+                    <div className="drag-handle">Drag here</div>
+                    <NASAofficial/>
+                </div>
+            </Draggable>
             <Draggable handle=".drag-handle">
                 <div>
                     <div className="drag-handle">Drag here</div>
