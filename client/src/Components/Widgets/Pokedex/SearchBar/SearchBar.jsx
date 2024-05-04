@@ -2,11 +2,12 @@ import './searchbar.css';
 import { useContext } from 'react';
 import PokemonContext from '../PokemonContext';
 import axios from 'axios';
+import pokeball from '../../../../assets/images/pokeball.png'
 
 const SearchBar = () => {
 
     const { pokeData, setPokeData, 
-        pokeChar, setPokeChar, 
+        setPokeChar, 
         setPokemon} = useContext(PokemonContext);
 
     const pokeAxios = axios.create({
@@ -15,19 +16,21 @@ const SearchBar = () => {
     
     const handler = (async (e) => {
         e.preventDefault();
-        await fetchPokeData(`pokemon/${e.target[0].value.toLowerCase()}`);
-        console.log(pokeData)
-        await fetchPokeChar(`characteristic/${pokeData.id}`)
-        console.log(pokeChar)
+        const newPokeData = await fetchPokeData(`pokemon/${e.target[0].value.toLowerCase()}`);
+        const newPokeChar = await fetchPokeChar(`characteristic/${newPokeData.id}`)
+
+        console.log(newPokeData)
+        console.log(newPokeChar)
+
         setPokemon({
-            name: pokeData.name,
-            height: pokeData.height,
-            weight: pokeData.weight,
-            abilities: pokeData.abilities[0].ability.name + ' & ' + pokeData.abilities[1].ability.name,
-            type: pokeData.types[0].type.name,
-            description: pokeChar.descriptions[7].description,
-            sprite: pokeData.sprites.front_default,
-            species: pokeData.species.name
+            name: newPokeData.name,
+            height: newPokeData.height,
+            weight: newPokeData.weight,
+            abilities: newPokeData.abilities[0].ability.name + ' & ' + pokeData.abilities[1].ability.name,
+            type: newPokeData.types[0].type.name,
+            description: newPokeChar.descriptions[7].description,
+            sprite: newPokeData.sprites.front_default,
+            species: newPokeData.species.name
         })
     })
 
@@ -35,6 +38,7 @@ const SearchBar = () => {
         try {
             const response = await pokeAxios.get(x)
             setPokeData(response.data)
+            return response.data
         } catch (error) {
             console.error(error)
         }
@@ -44,6 +48,7 @@ const SearchBar = () => {
         try {
             const response = await pokeAxios.get(x)
             setPokeChar(response.data)
+            return response.data
         } catch (error) {
             console.error(error)
         }
@@ -52,7 +57,9 @@ const SearchBar = () => {
     return (
         <form className="searchbar__form" onSubmit={handler}>
             <input className="searchbar__input" type="text" placeholder="Search..." />
-            <button className="searchbar__button" type="submit">Search</button>
+            <button className="searchbar__button" type="submit">
+                <img src={pokeball} alt="pokeball" className="searchbar__button-img" />
+            </button>
         </form>
     )
 }

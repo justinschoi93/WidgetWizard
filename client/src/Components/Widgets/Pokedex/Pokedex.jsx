@@ -1,6 +1,6 @@
 import './pokedex.css'
 import PokemonContext from './PokemonContext'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import bulbasaurData from './defaults/bulbasaurData.json'
 import bulbasaurChar from './defaults/bulbasaurChar.json'
 import SearchBar from './SearchBar/SearchBar'
@@ -23,6 +23,10 @@ const Pokedex = () => {
   pokemon.type = pokemon.type[0].toUpperCase() + pokemon.type.slice(1);
   pokemon.abilities = pokemon.abilities.split(' & ').map(x => x[0].toUpperCase() + x.slice(1)).join(' & ');
   
+  useEffect(() => {
+    console.log(pokemon.name)
+  }, [pokemon]);
+
   return (
     <PokemonContext.Provider value={{ pokeData, setPokeData, pokeChar, setPokeChar, pokemon, setPokemon }}>
         <div className="pokedex__container">

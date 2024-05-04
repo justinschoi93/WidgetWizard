@@ -10,12 +10,24 @@ import Draggable, { DraggableCore } from "react-draggable";
 const Dashboard = () => {
     return (
         <section className="dashboard__container">
-            {/* <Pokedex /> */}
-            <Draggable>
-                <Clock />
+            <Draggable handle=".drag-handle">
+                <div>
+                    <div className="drag-handle">Drag here</div>
+                    <Pokedex/>
+                </div>
             </Draggable>
-            <SoundCloud />
-
+            <Draggable handle=".drag-handle">
+                <div>
+                    <div className="drag-handle">Drag here</div>
+                    <Clock/>
+                </div>
+            </Draggable>
+            <Draggable handle=".drag-handle">
+                <div>
+                    <div className="drag-handle">Drag here</div>
+                    <SoundCloud/>
+                </div>
+            </Draggable>
         </section>
     )
 }
